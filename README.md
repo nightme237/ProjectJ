@@ -1,10 +1,14 @@
-# ProjectJ
---DESCRIPTION--
-A grocery list tracker where:
-  users can store their groceries on a conventional list but also track how much remaining product they have left
-  with this, we should be able to remind users when a product is low such that they can remember to buy more.
+## ProjectJ
 
-IDEAS:
-  integration with e-receipts so that users do not have to manually input bought groceries
-  recipe ideas for given groceries
-  
+### DESCRIPTION
+
+A grocery list tracker where users can:
+
+- Store their groceries on a conventional list.
+- Track how much remaining product they have left.
+- Receive reminders when a product is low, prompting them to buy more.
+
+### IDEAS
+
+- Integration with e-receipts so that users do not have to manually input bought groceries.
+- Recipe ideas for given groceries.
