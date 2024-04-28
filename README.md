@@ -12,3 +12,8 @@ A grocery list tracker where users can:
 
 - Integration with e-receipts so that users do not have to manually input bought groceries.
 - Recipe ideas for given groceries.
+
+
+TEMP:
+
+CALENDAR FOR TRACKING HABITS
