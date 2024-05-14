@@ -1,7 +1,9 @@
-const { getCalendar } = require('./functionality/Calender'); // Using require for getCalendar
+const { getCalendar, setCalendar } = require('./functionality/Calender.js'); // Using require for getCalendar
 const express = require('express');
+const { BACKEND_PORT } = require('../../calendar/src/config.json');
+
 const app = express();
-const { BACKEND_PORT } = require('../../frontend/src/config.json');
+app.use(express.json());
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
@@ -15,6 +17,10 @@ app.get('/', (req, res) => {
 
 app.get('/getCalendar', (req, res) => {
   res.send(getCalendar());
+});
+
+app.post('/setCalendar', (req, res) => {
+  res.send(setCalendar(req.body));
 });
 
 app.listen(BACKEND_PORT, () => {

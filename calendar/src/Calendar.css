@@ -1,0 +1,37 @@
+.dayBox {
+  border: solid 1px black;
+  margin: 0px;
+  padding: 0px;
+  overflow: auto;
+  text-align: center;
+}
+
+.monthBox {
+  display: grid;
+  grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
+  column-gap: 0px;
+  margin: 20px;
+  height: 80vh;
+}
+
+.titleGrid {
+  display: grid;
+  grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
+  column-gap: 0px;
+  margin: 20px;
+}
+
+.titleBox{
+  border: solid 1px black;
+  margin: 0px;
+  padding: 0px;
+  overflow: auto;
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Copperplate';
+}
+
+h1 {
+  color: #666;
+  margin-left: 20px;
+}
