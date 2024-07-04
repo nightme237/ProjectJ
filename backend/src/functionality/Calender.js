@@ -14,6 +14,7 @@ const fs = require('fs');
 
 function getCalendar() {
     const jsonData = fs.readFileSync('./src/database.json', 'utf8');
+    if (jsonData === '') return {};
     const calendar = JSON.parse(jsonData);
     return calendar
 }

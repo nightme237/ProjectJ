@@ -1,37 +1,198 @@
+@font-face {
+  font-family: 'blogger';
+  src: local('blogger'), url(./fonts/blogger.woff) format('woff');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
 .dayBox {
-  border: solid 1px black;
-  margin: 0px;
+  aspect-ratio: 1;
+  margin: 1px;
   padding: 0px;
-  overflow: auto;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bolder;
+  flex-direction: column;
+}
+
+.dayBox:hover {
+  border: solid black;
+  cursor: pointer;
 }
 
 .monthBox {
   display: grid;
-  grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px 100px;
   column-gap: 0px;
-  margin: 20px;
-  height: 80vh;
+  grid-auto-rows: auto;
+  row-gap: 0px;
+  margin: 2px 50px;
+  height: 515px;
 }
 
 .titleGrid {
   display: grid;
-  grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
   column-gap: 0px;
-  margin: 20px;
+  margin: 2px 50px;
+  margin-top: 15px;
 }
 
 .titleBox{
-  border: solid 1px black;
   margin: 0px;
   padding: 0px;
-  overflow: auto;
-  text-align: center;
-  font-size: 2em;
-  font-family: 'Copperplate';
+  font-size: 1.4em;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  color: black;
 }
 
-h1 {
-  color: #666;
+.blogger {
+  font-family: 'blogger';
+  font-style: normal;
+}
+
+.selected {
+  background-color: rgb(200, 200, 200);
+  color: white;
+}
+
+.selectedBlack {
+  background-color: rgb(15, 15, 15);
+  color: white;
+}
+
+.selectednonFocus {
+  background-color: rgb(240, 240, 240);
+}
+
+.nonFocus {
+  color: #AAA
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  column-gap: 0px;
+  margin: 2px 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  column-gap: 0px;
+  margin: 2px 50px;
+}
+
+.monthName {
+  margin: 0px;
+  padding: 0px;
+  font-size: 7em;
+  font-weight: bolder;
+  display: flex;
+  overflow: visible;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.yearName {
+  margin: 0px;
+  padding: 0px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  margin-top: 60px;
+  margin-left: 450px;
+  font-size: 1.5em;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  margin: 2px 50px;
+}
+
+.control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.control:hover {
+  cursor: pointer;
+}
+
+.test {
   margin-left: 20px;
+}
+
+.arrowLeft {
+  width: 20px;
+  height: 30px;
+  object-fit: cover;
+  overflow: hidden;
+  object-position: left;
+}
+
+.arrowRight {
+  width: 20px;
+  height: 30px;
+  object-fit: cover;
+  overflow: hidden;
+  object-position: left;
+  transform: scaleX(-1);
+}
+
+.text {
+  font-size: 0.5em;
+  font-weight: 100;
+  opacity: 0;
+}
+
+
+.selected .text {
+  opacity: 1;
+}
+
+.selectedBlack .text {
+  opacity: 1;
+}
+
+.selectednonFocus .text {
+  opacity: 1;
+}
+
+.selected .text:hover {
+  font-weight: bolder;
+  font-size: 0.6em;
+}
+
+.selectedBlack .text:hover {
+  font-weight: bolder;
+  font-size: 0.6em;
+}
+
+.input {
+  width: 60px;
+  box-sizing: border-box;
+  text-transform:uppercase;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Ensures full viewport height */
+  margin: 0; /* Removes default margin */
 }
