@@ -5,10 +5,10 @@ import Calendar from './Calendar';
 
 function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Calendar/>}></Route>
-    </Routes>
+    <BrowserRouter basename='/ProjectJ/'>
+      <Routes>
+        <Route path="/" element={<Calendar/>}></Route>
+      </Routes>
     </BrowserRouter>
   );
 }
