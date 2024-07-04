@@ -15,28 +15,29 @@ function Calendar () {
   const [yearNum, setyearNum] = useState(2024);
 
 	const loadData = async () => {
-    try {
-      const response = await fetch(`http://localhost:${BACKEND_PORT}/getCalendar`);
-      const data = await response.json();
-      setData(data);
-    } catch (error) {
-      alert(error);
-      newData();
-    }
+    // try {
+    //   const response = await fetch(`http://localhost:${BACKEND_PORT}/getCalendar`);
+    //   const data = await response.json();
+    //   setData(data);
+    // } catch (error) {
+    //   alert(error);
+    //   newData();
+    // }
+    newData();
 	}
 
-  const saveData = async (calendar) => {
-    try {
-      const response = await fetch(`http://localhost:${BACKEND_PORT}/setCalendar`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      })
-    } catch (error) {
-      alert(error);
-    }
+  const saveData = async (data) => {
+    // try {
+    //   const response = await fetch(`http://localhost:${BACKEND_PORT}/setCalendar`, {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify(data)
+    //   })
+    // } catch (error) {
+    //   alert(error);
+    // }
   }
 
   const newData = async () => {
